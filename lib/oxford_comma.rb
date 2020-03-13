@@ -9,9 +9,16 @@
   #correctly formats arrays of lengths greater than three
 
 
-def oxford_comma(list)
-  return list.join(' and ') if list.size < 3
-  list[-1] = "and " + list[-1]
-  list.join(', ')
+def oxford_comma(array)
+  case array.size
+  when 0
+    ""
+  when 1
+    array.first
+  when 2
+    array.join(' and ')
+  else
+    [array[0..-2].join(', '), array.last].join(', and ')
+  end
 end
   
