@@ -13,6 +13,3 @@ def oxford_comma(array_of_string_elements)
   end
 
 end
-
-
-  # puts aose[0..-2].join(", ") + " and " + aose[-1]
